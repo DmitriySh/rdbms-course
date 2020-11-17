@@ -99,8 +99,8 @@ SQL defines standards of:
      - supports in PostgreSQL and has a type alias in MySQL to `tinyint`
 
  - composite types (SQL 99)
-     - `array` (collections of values in single column)
-     - `row` (structured values in single column)
+     - `array` (collections of values that specifies the size in a single column: array[4])
+     - `row` (structured values of one or more parenthesized pairs in a single column: row(field_1 int, field_2 date))
 
  - `xml` type (SQL 2003 and 2006)
      - native support without first converting it to XML from one of the other SQL data types
