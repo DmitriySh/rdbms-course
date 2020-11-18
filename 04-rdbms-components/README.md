@@ -152,7 +152,7 @@ CREATE SCHEMA IF NOT EXISTS <schema_name> AUTHORIZATION <user_name>;
  - Each SQL connection is a new process for the host OS
  - Connection `pooling` let you reduce database-related overhead don't create physical connections on each time that dragging performance down
 ```sql
-get connection ---> [connection pool -> pull exists or create new] ---> execute sql statement ---> [close connection -> push to pool]
+get connection ---> [connection pool -> pull exists or create new] ---> execute sql statement ---> close connection -> [push to pool]
 ```
 
 
