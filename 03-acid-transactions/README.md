@@ -154,9 +154,9 @@ Isolation, read phenomena:
 
 Isolation levels:
  - read uncommitted
-   - `dirty reads`, `lost updates`, `non-repeatable` and `phantom reads` are allowed
+   - `dirty reads`, `non-repeatable` and `phantom reads` are allowed
  - read committed
-   - `lost updates`, `non-repeatable` and `phantom reads` can occur
+   - `non-repeatable` and `phantom reads` can occur
    - keeps write locks until the transaction ends but read locks are released at the statement ends
    - default for `Oracle`, `MS SQL`, `PostgreSQL`
  - repeatable reads
@@ -164,6 +164,7 @@ Isolation levels:
    - keeps read and write locks until the transaction ends
    - default for `MySQL`
  - serializable
+   - there are no anomalies
    - requires that read and write locks and range-locks of touched tuples to be released at the end of the transaction
    - requires related transactions to be executed sequentially
 
